@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurante - Registro de Ventas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>📊 Gourmet POS - Registro de Ventas</h1>
+    <nav>
+      <a href="index.html">Nuevo Pedido</a>
+      <a href="pedidos.html" class="active">Ver Ventas</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Métricas -->
+    <div class="stats-container">
+      <div class="stat-card">
+        <h3>Total Recaudado</h3>
+        <p id="total-recaudado">$0.00</p>
+      </div>
+      <div class="stat-card">
+        <h3>Pedidos Realizados</h3>
+        <p id="total-pedidos">0</p>
+      </div>
+    </div>
+
+    <!-- Tabla con el historial de pedidos -->
+    <section class="card">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <h2>Historial de Pedidos Vendidos</h2>
+        <button id="btn-limpiar" style="background: #e63946; color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer;">Limpiar Historial</button>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>ID / Fecha</th>
+            <th>Cliente / Mesa</th>
+            <th>Detalle</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody id="tabla-ventas-body">
+          <!-- Aquí se insertan dinámicamente los registros de ventas -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="ventas.js"></script>
+</body>
+</html>
